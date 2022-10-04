@@ -10,17 +10,24 @@
     <meta name="keywords"
         content="HTML, CSS, JavaScript, React, Angelo Grangetto, Angelo, Grangetto, Frontend, Developer, Fullstack, .NET, Argentina">
     <meta name="author" content="Angelo Grangetto">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,500;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="icon" type="image/x-icon" href="/assets/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyan: '#04d8f9',
+                    }
+                }
+            }
+        }
+    </script>
     <title>Angelo Grangetto - Frontend developer</title>
 </head>
 
-<body>
+<body class="bg-black text-white w-100 m-auto">
     <div class="disclaimer">
         <div>
             <p>
@@ -30,20 +37,23 @@
             </p>
         </div>
     </div>
-    <header>
+    <header class="pt-10">
         <section class="hero">
             <img src="assets/me.jpg" alt="Angelo Grangetto's Picture" width="220px" height="220px" />
             <div class="hero_info">
-                <div class="hero_info_title">
+                <div class="hero_info_title mb-2 pb-2">
                     <h1>Angelo Grangetto</h1>
-                    <h2><span style="color: #04d8f9">Frontend</span> Developer</h2>
+                    <h2 class="text-xl font-semibold text-cyan">
+                        Frontend
+                        Developer</h2>
                 </div>
                 <p>
                     👋 I'm an experienced frontend developer specialized in React with more than <b>2 years</b> working
                     on web technologies.
                 </p>
-                <div class="hero_info_social">
-                    <a href="https://www.linkedin.com/in/angelo-grangetto-199193156/" target="_blank">
+                <div class="hero_info_social mt-1">
+                    <a href="https://www.linkedin.com/in/angelo-grangetto-199193156/" target="_blank"
+                        class="fill-white">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 310 310"
                             style="enable-background:new 0 0 310 310;" xml:space="preserve">
@@ -58,7 +68,7 @@
                             C310,145.43,300.549,94.761,230.454,94.761z" />
                         </svg>
                     </a>
-                    <a href="https://github.com/angelograngetto" target="_blank">
+                    <a href="https://github.com/angelograngetto" target="_blank" class="fill-white">
                         <svg width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z" />
@@ -71,55 +81,63 @@
             </div>
         </section>
     </header>
-    <main>
+    <main class="m-auto">
         <section class="main_section">
-            <h3>💻 Technologies</h3>
-            <p>
+            <h3 class="mb-4">💻 Technologies</h3>
+            <p class="mb-2">
                 I worked with a lot of technologies because I'm and apasionate of that and I love try new things like
                 Preact, Astro and Deno Fresh. But my main technologies are:
             </p>
-            <br />
-            <p class="text-center">
-                <b>JavaScript • TypeScript • React • NextJS • .NET • NodeJS (Express) • MongoDB • Azure Functions •
-                    SQLServer • MySQL</b>
-            </p>
+            <div class="flex items-center justify-center gap-2 flex-wrap">
+                <p class="bg-yellow-500 font-semibold px-2 text-black">JavaScript</p>
+                <p class="bg-sky-500 font-semibold px-2 text-black">TypeScript</p>
+                <p class="bg-cyan font-semibold px-2 text-black">React</p>
+                <p class="bg-pink-600 font-semibold px-2 text-black">NextJS</p>
+                <p class="bg-orange-500 font-semibold px-2 text-black">Astro</p>
+                <p class="bg-sky-500 font-semibold px-2 text-black">.NET</p>
+                <p class="bg-green-500 font-semibold px-2 text-black">NodeJS</p>
+                <p class="bg-green-500 font-semibold px-2 text-black">MongoDB</p>
+                <p class="bg-sky-500 font-semibold px-2 text-black">SQLServer</p>
+                <p class="bg-purple-600 font-semibold px-2 text-black">MaterialUI</p>
+                <p class="bg-indigo-500 font-semibold px-2 text-black">Tailwind</p>
+            </div>
         </section>
-        <section class="main_section">
+        <section class="main_section mt-4">
             <h3>👨‍💻 Experience</h3>
-            <div class="main_section_experience">
-                <div>
-                    <h4>
+            <div class="mt-4 flex items-center justify-center gap-2 flex-wrap">
+                <div class="border-2 rounded-md border-cyan w-44 text-center h-60 p-4">
+                    <h4 class="text-xl font-bold border-b border-cyan pb-1">
                         ABTEC
                     </h4>
-                    <span>Dec. 2020 - Present</span>
-                    <p>
+                    <span class="text-xs font-extralight">Dec. 2020 - Present</span>
+                    <p class="text-sm mt-1">
                         My ownship software factory with a friend where I work as fullstack developer with React,
                         Preact, .NET, PHP and more.
                     </p>
                 </div>
-                <div>
-                    <h4>
+                <div class="border-2 rounded-md border-cyan w-44 text-center h-60 p-4">
+                    <h4 class="text-xl font-bold border-b border-cyan pb-1">
                         Alkemy
                     </h4>
-                    <span>Jul. 2021 - Sep. 2021</span>
-                    <p>
-                        Work as frontend developer with React for a non-profit organization.
+                    <span class="text-xs font-extralight">Jul. 2021 - Sep. 2021</span>
+                    <p class="text-sm mt-1">
+                        Worked as frontend developer with React for a non-profit organization.
                     </p>
                 </div>
-                <div>
-                    <h4>
+                <div class="border-2 rounded-md border-cyan w-44 text-center h-60 p-4">
+                    <h4 class="text-xl font-bold border-b border-cyan pb-1">
                         IntegraMedia
                     </h4>
-                    <span>Sep. 2021 - Present</span>
-                    <p>
-                        Work as fullstack developer with React and .NET for a product for insurance.
+                    <span class="text-xs font-extralight">Sep. 2021 - Present</span>
+                    <p class="text-sm mt-1">
+                        Working as fullstack developer with React and .NET for a product for insurance.
                     </p>
                 </div>
             </div>
         </section>
-        <section class="main_section">
+        <section class=" main_section mt-4">
             <h3>📚 Education</h3>
-            <div class="main_section_education">
+            <div class="main_section_education mt-4">
                 <h4>
                     University
                 </h4>
